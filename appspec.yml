@@ -18,6 +18,7 @@ permissions:
     mode: 775
     type:
       - directory
+
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
@@ -32,5 +33,9 @@ hooks:
       runas: root
     - location: scripts/install_git
       timeout: 300
+      runas: root
+    - location: scripts/install_git
+      runas: root
+    - location: scripts/install_git
       runas: root
 
