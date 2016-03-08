@@ -19,4 +19,17 @@ permissions:
     type:
       - directory
 
+hooks:
+  - BeforeInstall:
+    - location: scripts/install_dependencies
+      runas: root
+  - AfterInstall:
+    - location: scripts/install_dependencies
+      runas: root
+    - location: scripts/install_git
+      runas: root
+    - location: scripts/install_git
+      runas: root
+    - location: scripts/install_git
+      runas: root
 
