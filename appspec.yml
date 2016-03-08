@@ -11,6 +11,13 @@ permissions:
     mode: 775
     type:
       - directory
+  - object: /var/www/html/infra
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 775
+    type:
+      - directory
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
